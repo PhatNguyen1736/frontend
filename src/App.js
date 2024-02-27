@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom"
 import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
 const App = () => {
   return (
-    // <BrowserRouter>
       <BrowserRouter>
         <Routes>
-          {/* <Header/> */}
             <Route path="/" element={<HomeScreen/>} exact/>
-            {/* </Route> */}
-          {/* <Footer/> */}
+            <Route path="/product/:id" element={<ProductScreen/>} exact/>
         </Routes>
       </BrowserRouter>
   );
