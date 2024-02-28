@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import "bootstrap-icons/font/bootstrap-icons.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Header = () => {
   return (
     <header>
