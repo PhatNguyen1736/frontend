@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Row, Col, Container } from 'react-bootstrap' 
-import products from '../products'
 import Product from '../components/Product'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import axios from 'axios'
 const HomeScreen = () => {
+  const [products, setProducts] = useState([])
+  // hàm useEffect để gọi API từ backend để lấy dữ liệu products
+  useEffect(() => {   
+    const fetchProducts = async () =>{
+      const {data} = await axios.get('/api/products')
+
+      setProducts(data)
+    }
+      fetchProducts()
+  }, [])
   return (
     <>
      <Header/>
